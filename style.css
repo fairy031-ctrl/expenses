@@ -1,0 +1,51 @@
+:root{
+  --bg:#f6f7f6;--card:#fff;--ink:#16211f;--muted:#6b7a77;--line:#e3e8e6;
+  --brand:#0f766e;--brand-ink:#fff;--danger:#b91c1c;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0e1514;--card:#17211f;--ink:#e8f0ee;--muted:#8ea39f;--line:#243230;--brand:#2dd4bf;--brand-ink:#04201c;--danger:#f87171}
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 system-ui,-apple-system,Roboto,sans-serif}
+body{min-height:100vh;padding-bottom:96px}
+header{display:flex;align-items:center;justify-content:space-between;padding:calc(12px + env(safe-area-inset-top)) 12px 8px;background:var(--brand);color:var(--brand-ink)}
+header button{background:none;border:0;color:inherit;font-size:32px;width:48px;height:48px;border-radius:24px}
+.month-wrap{text-align:center}
+h1{margin:0;font-size:18px;font-weight:600}
+.total{font-size:28px;font-weight:700;font-variant-numeric:tabular-nums}
+nav{display:flex;background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}
+.tab{flex:1;padding:14px 0;background:none;border:0;color:var(--muted);font-size:15px;font-weight:600;border-bottom:3px solid transparent}
+.tab.active{color:var(--brand);border-color:var(--brand)}
+main{padding:12px;max-width:640px;margin:0 auto}
+.panel{display:none}.panel.active{display:block}
+h2{font-size:14px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:20px 4px 8px}
+.muted{color:var(--muted)}.center{text-align:center;margin-top:48px}
+.day{font-size:13px;color:var(--muted);margin:16px 4px 6px;display:flex;justify-content:space-between}
+.item{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:6px;width:100%;text-align:left;color:inherit;font:inherit}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.item .meta{flex:1;min-width:0}
+.item .cat{font-weight:600}
+.item .note{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item .amt{font-weight:700;font-variant-numeric:tabular-nums}
+.bar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:6px}
+.bar .top{display:flex;justify-content:space-between;margin-bottom:6px}
+.bar .track{height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar .fill{height:100%;border-radius:4px}
+.trend{display:flex;align-items:flex-end;gap:8px;height:140px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.trend .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;font-size:11px;color:var(--muted)}
+.trend .col div{width:100%;background:var(--brand);border-radius:4px 4px 0 0;min-height:2px}
+#fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));width:60px;height:60px;border-radius:30px;border:0;background:var(--brand);color:var(--brand-ink);font-size:34px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:12px}
+label input,label select{margin-top:4px;color:var(--ink)}
+.row{display:flex;gap:8px;margin:8px 0;flex-wrap:wrap}
+.row>*{flex:1}
+.btn{padding:12px 16px;border:0;border-radius:10px;background:var(--brand);color:var(--brand-ink);font:inherit;font-weight:600;text-align:center}
+.btn.secondary{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.btn.danger{background:var(--card);color:var(--danger);border:1px solid var(--danger)}
+.cat-row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin-bottom:6px}
+.cat-row span:nth-child(2){flex:1}
+.cat-row button{background:none;border:0;color:var(--danger);font-size:20px;padding:4px 8px}
+dialog{border:0;border-radius:16px;padding:20px;width:min(92vw,420px);background:var(--bg);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+dialog h2{margin:0 0 12px;font-size:18px;text-transform:none;letter-spacing:0;color:var(--ink)}
